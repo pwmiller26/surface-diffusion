@@ -140,3 +140,12 @@ Geometry parameters, biological parameters, discretization parameters, and visua
     <td>Flag to return an array of solutions at all time points</td>
   </tr>
 </table>
+
+## Miscellaneous 
+
+The surface of revolution drive file contains a range of preset geometry options, including the example geometries studied in our paper, and steady solutions such as those in our Figures 1 and 3 can be replicated choice of corresponding parameters listed in the paper. 
+
+To calculate interface lengths, as in Figure 2, we have included a utility script (`+util/interface_length.m`). Given the matrices xx, yy, zz as defined in the driver scripts, and the coefficient matrix U output by time integration, this script will calculate the arclegth of a specified levelset. 
+
+Altering the model to another PDE, as in our Supplement, requires the directly modifying the functions 'N_direct' or 'N_heaviside' in ('sor/SORDiffusion.m') or its spherical/toroidal equivalents. 
+
